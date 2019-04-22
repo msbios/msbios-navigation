@@ -25,7 +25,7 @@
   },
   "require": {
     "php": "^5.6 || ^7.0",
-    "zendframework/zend-navigation": "^2.8",
+    "zendframework/zend-navigation": "^2.9",
     "msbios/msbios": "^1.0"
   },
   "require-dev": {
@@ -39,13 +39,7 @@
       "phpunit --colors=always"
     ],
     "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
-    "upload-coverage": "coveralls -v",
-    "cache": [
-      "rm -Rf data/cache/*.php",
-      "rm -Rf data/cache/*.dat",
-      "rm -Rf data/logs/*.log"
-    ],
-    "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
+    "upload-coverage": "coveralls -v"
   },
   "extra": {
     "zf": {
