@@ -24,10 +24,10 @@ return [
         ],
     ],
 
-    'service_manager' => [
-        'factories' => [
-            'navigation' =>
-                \Zend\Navigation\Service\DefaultNavigationFactory::class,
-        ],
-    ],
+    // 'service_manager' => [
+    //     'factories' => [
+    //         'navigation' =>
+    //             \Zend\Navigation\Service\DefaultNavigationFactory::class,
+    //     ],
+    // ],
 ];
