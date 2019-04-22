@@ -1,7 +1,7 @@
 {
   "name": "msbios/navigation",
   "description": "MSBios Navigation",
-  "license": "GPL",
+  "license": "MIT",
   "keywords": [
     "php"
   ],
