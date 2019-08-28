@@ -29,7 +29,14 @@
     "msbios/msbios": "^1.0"
   },
   "require-dev": {
-    "msbios/test": "^1.0"
+    "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
+    "zendframework/zend-mvc": "^3.0.1",
+    "zendframework/zend-mvc-plugins": "^1.0",
+    "zendframework/zend-router": "^3.0",
+    "zendframework/zend-cache": "^2.7",
+    "zendframework/zend-serializer": "^2.8",
+    "msbios/test": "^1.0",
+    "msbios/debug": "^1.0"
   },
   "scripts": {
     "cs-check": "phpcs",

@@ -6,7 +6,33 @@
 
 namespace MSBios\Navigation;
 
+use Zend\Router\Http\Segment;
+
 return [
+
+    'router' => [
+        'routes' => [
+            'navigation' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route' => '/navigation/',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action' => 'navigation',
+                        // 'format' => '[xml|json]'
+                    ],
+                ],
+            ],
+        ],
+    ],
+
+    'controllers' => [
+        'factories' => [
+            Controller\IndexController::class =>
+                Factory\NavigationableFactory::class,
+        ],
+    ],
+
     'navigation' => [
         'default' => [
             // 'home' => [
