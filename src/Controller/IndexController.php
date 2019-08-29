@@ -6,7 +6,7 @@
 
 namespace MSBios\Navigation\Controller;
 
-use Zend\Json\Json;
+use MSBios\Navigation\NavigationAwareTrait;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Navigation\Navigation;
 use Zend\View\Model\JsonModel;
@@ -17,9 +17,7 @@ use Zend\View\Model\JsonModel;
  */
 class IndexController extends AbstractActionController
 {
-
-    /** @var Navigation */
-    protected $navigation;
+    use NavigationAwareTrait;
 
     /**
      * IndexController constructor.
@@ -28,27 +26,18 @@ class IndexController extends AbstractActionController
      */
     public function __construct(Navigation $navigation)
     {
-        $this->navigation = $navigation;
+        $this->setNavigation($navigation);
     }
 
     /**
      * @inheritdoc
      *
-     * @return \Zend\View\Model\ViewModel
+     * @return JsonModel|\Zend\View\Model\ViewModel
      */
     public function indexAction()
     {
-        return parent::indexAction();
-    }
-
-    /**
-     * @return JsonModel
-     */
-    public function navigationAction()
-    {
-
         return new JsonModel([
-            'default' => $this->navigation->toArray()
+            'default' => $this->getNavigation()->toArray()
         ]);
     }
 }

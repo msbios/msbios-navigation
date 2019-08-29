@@ -46,7 +46,8 @@
       "phpunit --colors=always"
     ],
     "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
-    "upload-coverage": "coveralls -v"
+    "upload-coverage": "coveralls -v",
+    "serve": "php -S 0.0.0.0:3107 -t public public/index.php"
   },
   "extra": {
     "zf": {

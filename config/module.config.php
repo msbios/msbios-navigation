@@ -6,20 +6,21 @@
 
 namespace MSBios\Navigation;
 
-use Zend\Router\Http\Segment;
+use Zend\Router\Http\Regex;
+
 
 return [
 
     'router' => [
         'routes' => [
             'navigation' => [
-                'type' => Segment::class,
+                'type' => Regex::class,
                 'options' => [
-                    'route' => '/navigation/',
+                    'regex' => '/navigation.(?<format>(json|xml)?)',
+                    'spec' => '/navigation.%format%',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
-                        'action' => 'navigation',
-                        // 'format' => '[xml|json]'
+                        'action' => 'index'
                     ],
                 ],
             ],
@@ -35,25 +36,14 @@ return [
 
     'navigation' => [
         'default' => [
-            // 'home' => [
-            //     'label' => 'Home',
-            //     'route' => 'home',
-            // ],
-            // 'page-1' => [
-            //     'label' => 'Page #1',
-            //     'uri' => '#page1',
-            // ],
-            // 'page-2' => [
-            //     'label' => 'Page #2',
-            //     'uri' => '#page2',
-            // ],
+            // ...
         ],
     ],
 
-    // 'service_manager' => [
-    //     'factories' => [
-    //         'navigation' =>
-    //             \Zend\Navigation\Service\DefaultNavigationFactory::class,
-    //     ],
-    // ],
+    'service_manager' => [
+        'factories' => [
+            'navigation' =>
+                \Zend\Navigation\Service\DefaultNavigationFactory::class,
+        ],
+    ],
 ];
