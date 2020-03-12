@@ -7,12 +7,13 @@ namespace MSBios\Navigation;
 
 /**
  * Class Module
+ *
  * @package MSBios\Navigation
  */
 class Module extends \MSBios\Module
 {
     /** @const VERSION */
-    const VERSION = '1.0.4';
+    const VERSION = '2.0.0';
 
     /**
      * @inheritdoc

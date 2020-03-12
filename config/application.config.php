@@ -6,7 +6,21 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
-
+        'Laminas\Serializer',
+        'Laminas\Mvc\Plugin\FilePrg',
+        'Laminas\Form',
+        'Laminas\Hydrator',
+        'Laminas\InputFilter',
+        'Laminas\Filter',
+        'Laminas\Mvc\Plugin\FlashMessenger',
+        'Laminas\Mvc\Plugin\Identity',
+        'Laminas\Mvc\Plugin\Prg',
+        'Laminas\Session',
+        'Laminas\Navigation',
+        'Laminas\Router',
+        'Laminas\Validator',
+        'MSBios',
+        'Laminas\Cache',
         'Zend\Serializer',
         'Zend\Cache',
         'Zend\Mvc\Plugin\FilePrg',
@@ -23,6 +37,7 @@ return [
 
         'ZendDeveloperTools',
         'SanSessionToolbar'
+        'Laminas\DeveloperTools',
     ],
     'module_listener_options' => [
         'module_paths' => [

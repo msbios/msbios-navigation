@@ -25,18 +25,18 @@
   },
   "require": {
     "php": "^5.6 || ^7.0",
-    "zendframework/zend-navigation": "^2.9",
-    "msbios/msbios": "^1.0"
+    "laminas/laminas-navigation": "^2.9",
+    "msbios/msbios": "^2.0"
   },
   "require-dev": {
-    "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
-    "zendframework/zend-mvc": "^3.0.1",
-    "zendframework/zend-mvc-plugins": "^1.0",
-    "zendframework/zend-router": "^3.0",
-    "zendframework/zend-cache": "^2.7",
-    "zendframework/zend-serializer": "^2.8",
-    "msbios/test": "^1.0",
-    "msbios/debug": "^1.0"
+    "laminas/laminas-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
+    "laminas/laminas-mvc": "^3.1",
+    "laminas/laminas-mvc-plugins": "^1.0",
+    "laminas/laminas-router": "^3.3",
+    "laminas/laminas-cache": "^2.9",
+    "laminas/laminas-serializer": "^2.9",
+    "msbios/test": "^2.0",
+    "msbios/debug": "^2.0"
   },
   "scripts": {
     "cs-check": "phpcs",
