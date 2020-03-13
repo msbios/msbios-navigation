@@ -8,13 +8,10 @@ namespace MSBios\Navigation\Controller;
 
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\Navigation\Navigation;
+use Laminas\View\Model\FeedModel;
 use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ModelInterface;
-use Laminas\View\Model\ViewModel;
 use MSBios\Navigation\NavigationAwareTrait;
-// use Zend\Mvc\Controller\AbstractActionController;
-// use Zend\Navigation\Navigation;
-// use Zend\View\Model\JsonModel;
 
 /**
  * Class IndexController
@@ -24,6 +21,18 @@ use MSBios\Navigation\NavigationAwareTrait;
 class IndexController extends AbstractActionController
 {
     use NavigationAwareTrait;
+
+    /** @var array */
+    protected $acceptCriteria = [
+        JsonModel::class => [
+            'application/json',
+            'application/javascript',
+        ],
+        FeedModel::class => [
+            'application/rss+xml',
+            'application/atom+xml',
+        ],
+    ];
 
     /**
      * IndexController constructor.
@@ -42,10 +51,8 @@ class IndexController extends AbstractActionController
      */
     public function indexAction(): ModelInterface
     {
-        return new JsonModel([
-            'default' => $this
-                ->getNavigation()
-                ->toArray()
-        ]);
+        return $this
+            ->acceptableViewModelSelector($this->acceptCriteria)
+            ->setVariable('default', $this->getNavigation()->toArray());
     }
 }
