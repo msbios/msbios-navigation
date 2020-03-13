@@ -7,23 +7,25 @@
 namespace MSBios\Navigation\Factory;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
+use MSBios\Navigation\NavigationAwareInterface;
 
 /**
  * Class NavigationableFactory
+ *
  * @package MSBios\Navigation\Factory
  */
 class NavigationableFactory implements FactoryInterface
 {
     /**
-     * @inheritdoc
+     * @inheritDoc
      *
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param array|null $options
-     * @return mixed|object
+     * @return NavigationAwareInterface
      */
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null): NavigationAwareInterface
     {
         return new $requestedName($container->get('navigation'));
     }
