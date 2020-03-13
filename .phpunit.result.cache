@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":186:{a:2:{s:7:"defects";a:1:{s:57:"MSBiosTest\Navigation\ModuleTest::testGetAutoloaderConfig";i:6;}s:5:"times";a:1:{s:57:"MSBiosTest\Navigation\ModuleTest::testGetAutoloaderConfig";d:0.006;}}}

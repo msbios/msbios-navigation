@@ -25,8 +25,11 @@ class NavigationableFactory implements FactoryInterface
      * @param array|null $options
      * @return NavigationAwareInterface
      */
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null): NavigationAwareInterface
-    {
+    public function __invoke(
+        ContainerInterface $container,
+        $requestedName,
+        array $options = null
+    ): NavigationAwareInterface {
         return new $requestedName($container->get('navigation'));
     }
 }
