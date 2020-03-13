@@ -19,25 +19,13 @@ return [
         'Laminas\Navigation',
         'Laminas\Router',
         'Laminas\Validator',
-        'MSBios',
         'Laminas\Cache',
-        'Zend\Serializer',
-        'Zend\Cache',
-        'Zend\Mvc\Plugin\FilePrg',
-        'Zend\Form',
-        'Zend\Hydrator',
-        'Zend\InputFilter',
-        'Zend\Filter',
-        'Zend\Mvc\Plugin\FlashMessenger',
-        'Zend\Mvc\Plugin\Identity',
-        'Zend\Mvc\Plugin\Prg',
-        'Zend\Router',
 
+        'MSBios',
         'MSBios\Navigation',
 
-        'ZendDeveloperTools',
-        'SanSessionToolbar'
-        'Laminas\DeveloperTools',
+        // 'SanSessionToolbar',
+        'Laminas\DeveloperTools'
     ],
     'module_listener_options' => [
         'module_paths' => [

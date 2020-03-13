@@ -6,8 +6,8 @@
 
 namespace MSBios\Navigation;
 
-use Zend\Router\Http\Regex;
-
+use Laminas\Navigation\Service\DefaultNavigationFactory;
+use Laminas\Router\Http\Regex;
 
 return [
 
@@ -43,7 +43,7 @@ return [
     'service_manager' => [
         'factories' => [
             'navigation' =>
-                \Zend\Navigation\Service\DefaultNavigationFactory::class,
+                DefaultNavigationFactory::class,
         ],
     ],
 ];

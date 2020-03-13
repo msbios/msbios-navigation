@@ -24,7 +24,7 @@
     }
   },
   "require": {
-    "php": "^5.6 || ^7.0",
+    "php": "7.0",
     "laminas/laminas-navigation": "^2.9",
     "msbios/msbios": "^2.0"
   },
@@ -46,8 +46,7 @@
       "phpunit --colors=always"
     ],
     "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
-    "upload-coverage": "coveralls -v",
-    "serve": "php -S 0.0.0.0:3107 -t public public/index.php"
+    "upload-coverage": "coveralls -v"
   },
   "extra": {
     "zf": {

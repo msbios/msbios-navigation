@@ -6,13 +6,19 @@
 
 namespace MSBios\Navigation\Controller;
 
+use Laminas\Mvc\Controller\AbstractActionController;
+use Laminas\Navigation\Navigation;
+use Laminas\View\Model\JsonModel;
+use Laminas\View\Model\ModelInterface;
+use Laminas\View\Model\ViewModel;
 use MSBios\Navigation\NavigationAwareTrait;
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\Navigation\Navigation;
-use Zend\View\Model\JsonModel;
+// use Zend\Mvc\Controller\AbstractActionController;
+// use Zend\Navigation\Navigation;
+// use Zend\View\Model\JsonModel;
 
 /**
  * Class IndexController
+ *
  * @package MSBios\Navigation\Controller
  */
 class IndexController extends AbstractActionController
@@ -30,14 +36,16 @@ class IndexController extends AbstractActionController
     }
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      *
-     * @return JsonModel|\Zend\View\Model\ViewModel
+     * @return ModelInterface
      */
-    public function indexAction()
+    public function indexAction(): ModelInterface
     {
         return new JsonModel([
-            'default' => $this->getNavigation()->toArray()
+            'default' => $this
+                ->getNavigation()
+                ->toArray()
         ]);
     }
 }

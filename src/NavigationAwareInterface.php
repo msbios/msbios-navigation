@@ -6,10 +6,11 @@
 
 namespace MSBios\Navigation;
 
-use Zend\Navigation\Navigation;
+use Laminas\Navigation\Navigation;
 
 /**
  * Interface NavigationAwareInterface
+ *
  * @package MSBios\Navigation
  */
 interface NavigationAwareInterface
@@ -17,7 +18,7 @@ interface NavigationAwareInterface
     /**
      * @return Navigation
      */
-    public function getNavigation();
+    public function getNavigation(): Navigation;
 
     /**
      * @param Navigation $navigation

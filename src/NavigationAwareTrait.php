@@ -6,10 +6,11 @@
 
 namespace MSBios\Navigation;
 
-use Zend\Navigation\Navigation;
+use Laminas\Navigation\Navigation;
 
 /**
- * Interface NavigationAwareInterface
+ * Trait NavigationAwareTrait
+ *
  * @package MSBios\Navigation
  */
 trait NavigationAwareTrait
@@ -18,14 +19,18 @@ trait NavigationAwareTrait
     protected $navigation;
 
     /**
+     * @inheritDoc
+     *
      * @return Navigation
      */
-    public function getNavigation()
+    public function getNavigation(): Navigation
     {
         return $this->navigation;
     }
 
     /**
+     * @inheritDoc
+     *
      * @param Navigation $navigation
      * @return $this
      */
